@@ -39,7 +39,7 @@ Math: Numerical integration of Generalized Laguerre Polynomials.
 Clone the repository:
 
 git clone [https://github.com/PranavElayidam/Hydrogen_atom.git](https://github.com/PranavElayidam/Hydrogen_atom.git)
-cd hydrogen-visualization-suite
+cd hydrogen_atom
 
 
 Install dependencies:
@@ -86,18 +86,6 @@ $m>0$: $\frac{1}{\sqrt{2}} (Y_{l,-m} + (-1)^m Y_{lm})$
 
 $m<0$: $\frac{i}{\sqrt{2}} (Y_{l,-|m|} - (-1)^m Y_{l|m|})$
 
-📂 Directory Structure
-
-.
-├── hydrogen_engine/          # THE NEW CORE (Modular Logic)
-│   ├── physics/              # Math Kernel (Angular & Radial logic)
-│   ├── visualization/        # Plotting Engines (Matplotlib/3D)
-│   └── main.py               # CLI Entry Point
-│
-├── legacy_scripts/           # THE OLD CODE (Hardcoded Prototypes)
-│   └── (Individual scripts for s, px, py, etc.)
-│
-└── requirements.txt          # Python Dependencies
 
 
 📄 License
