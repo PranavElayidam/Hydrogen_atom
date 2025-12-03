@@ -38,7 +38,7 @@ Math: Numerical integration of Generalized Laguerre Polynomials.
 
 Clone the repository:
 
-git clone [https://github.com/YOUR_USERNAME/hydrogen-visualization-suite.git](https://github.com/YOUR_USERNAME/hydrogen-visualization-suite.git)
+git clone [https://github.com/PranavElayidam/Hydrogen_atom.git](https://github.com/PranavElayidam/Hydrogen_atom.git)
 cd hydrogen-visualization-suite
 
 
