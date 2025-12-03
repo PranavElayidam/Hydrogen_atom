@@ -71,10 +71,12 @@ python hydrogen_engine/main.py radial -n 3 -l 0
 
 🧮 Mathematical Implementation
 
-The engine constructs the full wavefunction $\psi_{nlm}(r,\theta,\phi)$ by combining:
+The engine constructs the full wavefunction 
+$\psi_{nlm}(r,\theta,\phi)$ by combining:
 
 Radial Component ($R_{nl}$):
 Computed using scipy.special.genlaguerre.
+
 $$ R_{nl}(r) \propto e^{-\rho/2} \rho^l L_{n-l-1}^{2l+1}(\rho) $$
 
 Angular Component ($Y_{lm}$):
