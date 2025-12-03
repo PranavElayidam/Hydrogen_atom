@@ -1,4 +1,18 @@
-thematics
+
+
+⚠️ Deprecation Notice
+
+These scripts are archived prototypes. They are preserved here to demonstrate the project's history and the engineering challenges that led to the development of the main hydrogen_engine.
+
+Do not use these files for production. They contain hardcoded logic and mislabeled filenames. Use the CLI tool in the root directory instead.These codes were written by me for my BSc Physics final year project.
+
+During the development of these codes , i thought making these visualization tool.
+
+The Engineering Analysis
+
+The refactoring process identified three critical issues in this codebase:
+
+1. Hardcoded Mathematics
 
 The scripts used explicit trigonometric formulas (e.g., Z = cos(theta) * sin(phi)) instead of a generalized Spherical Harmonic solver.
 
