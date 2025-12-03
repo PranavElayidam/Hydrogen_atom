@@ -28,7 +28,7 @@ phi = n.linspace(0,2*n.pi,1000) # Azimuthal angle from 0 to 2pi (1000 points)
 theta,phi = n.meshgrid(theta,phi) # Create a 2D grid of (theta, phi) values
 
 # Calculating the d_xy orbital function
-Z =(1/2)*(n.sqrt(3/n.pi))*(n.sin(theta)*(n.sin(phi))) # Angular part of the orbital
+Z =(-3/8)*(n.sqrt(14/(3*n.pi)))*(5*n.cos(theta)*n.cos(theta)-1)*(n.sin(theta)*n.cos(phi))# Angular part of the orbital
 
 # Converting spherical coordinates to Cartesian coordinates
 x,y,z = sphere(n.abs(Z),theta,phi)# Use the absolute value of Z for radial distance
@@ -48,14 +48,13 @@ ax.scatter(0, 0, 0, color='red', s=100, label='nucleus')  # Red dot at the origi
 
 # Setting plot properties
 ax.set_aspect('auto')  # Allow the plot to scale automatically
-ax.set_title("p$_{y}$",fontsize=18) # Set the title
+ax.set_title("f$_{xz^{2}}$",fontsize=18) # Set the title
 ax.set_xlabel("X") # Label for the X-axis
 ax.set_ylabel("Y") # Label for the Y-axis
 ax.set_zlabel("Z") # Label for the Z-axis
 
 # Plotting the orbital surface
-ax.plot_surface(x,y,z,cmap='bwr', alpha =0.7)# Surface plot with bwr colormap and transparency
-
+ax.plot_surface(x,y,z,cmap='winter', alpha =0.7)# Surface plot with winter colormap and transparency
 
 # Adding a legend to identify the axes and nucleus
 ax.legend() 
