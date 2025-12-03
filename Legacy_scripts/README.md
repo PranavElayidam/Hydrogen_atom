@@ -24,45 +24,15 @@ Solution: The new Engine uses scipy.special.sph_harm to calculate any $(l, m)$ s
 
 During the forensic code review, it was discovered that several f-orbital ($l=3$) scripts contained correct shapes but mismatched filenames due to coordinate swaps in the hardcoded formulas.
 
-File Name
+File Name              Formula Used         Actual Orbital Plotted           Correct Label
 
-Formula Used
+fxyz orbital.py       $\cos(2\phi)$         $z(x^2-y^2)$                    $f_{z(x^2-y^2)}$
 
-Actual Orbital Plotted
+fy(x^2-z^2)           $\sin(2\phi)$         $xyz$                           $f_{xyz}$                       
 
-Correct Label
+fx(x2-3y2)            $\sin(3\phi)$        $y(3x^2-y^2)$                    $f_{y(3x^2-y^2)}$
 
-fxyz orbital.py
-
-$\cos(2\phi)$
-
-$z(x^2-y^2)$
-
-$f_{z(x^2-y^2)}$
-
-fy(x^2-z^2) orbital.py
-
-$\sin(2\phi)$
-
-$xyz$
-
-$f_{xyz}$
-
-fx(x2-3y2) orbital.py
-
-$\sin(3\phi)$
-
-$y(3x^2-y^2)$
-
-$f_{y(3x^2-y^2)}$
-
-fy(3y2-y2) orbital.py
-
-$\cos(3\phi)$
-
-$x(x^2-3y^2)$
-
-$f_{x(x^2-3y^2)}$
+fy(3y2-y2)            $\cos(3\phi)$        $x(x^2-3y^2)$                    $f_{x(x^2-3y^2)}$
 
 Note: The new engine resolves this by using verified scipy implementations of Real Spherical Harmonics.
 
@@ -73,3 +43,5 @@ The original Probability Density script (Probability density function plotting.p
 Problem: This restricted the polar angle to $[-\pi/2, \pi/2]$, effectively mirroring the top hemisphere of the atom onto the bottom.
 
 Solution: The new engine utilizes arccos(z/r) to correctly map the full $[0, \pi]$ domain, preserving the asymmetry of directed orbitals (e.g., $d_{xz}$).
+
+P.S: Only once drew the table and wrote down everything i realized i could just changed the name of the files. I will try to avoid these stupid mistakes next time.
