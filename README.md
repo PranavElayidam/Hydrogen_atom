@@ -68,7 +68,33 @@ python hydrogen_engine/main.py density -n 4 -l 3 -m 0
 # Example: 3s orbital
 python hydrogen_engine/main.py radial -n 3 -l 0
 
+💻 CLI Orbital Reference (3D Shapes)
 
+This table maps the common chemical notation (e.g., px​, dz2​) to the required command-line inputs for visualizing the 3D orbital shape. The principal quantum number n must always be ≥(l+1).
+
+Orbital Name,"Quantum Numbers (n,l,m)",Description,"Example Command (n=2, 3, or 4)"
+s Orbitals,"l=0,m=0","Spherical (e.g., 1s,2s,3s)",python main.py shape -n 2 -l 0 -m 0
+---,---,---,---
+p Orbitals (l=1),,,
+pz​,"l=1,m=0",Aligned along the z-axis.,python main.py shape -n 2 -l 1 -m 0
+px​,"l=1,m=+1","Lies in the xz-plane, based on the Re(Y1,1​) combination.",python main.py shape -n 2 -l 1 -m 1
+py​,"l=1,m=−1","Lies in the yz-plane, based on the Im(Y1,1​) combination.",python main.py shape -n 2 -l 1 -m -1
+---,---,---,---
+d Orbitals (l=2),,,
+dz2​,"l=2,m=0",Aligned along the z-axis with a toroidal node.,python main.py shape -n 3 -l 2 -m 0
+dxz​,"l=2,m=+1",Lobes lie in the xz-plane.,python main.py shape -n 3 -l 2 -m 1
+dyz​,"l=2,m=−1",Lobes lie in the yz-plane.,python main.py shape -n 3 -l 2 -m -1
+dx2−y2​,"l=2,m=+2",Lobes lie along the x and y axes.,python main.py shape -n 3 -l 2 -m 2
+dxy​,"l=2,m=−2",Lobes lie between the x and y axes.,python main.py shape -n 3 -l 2 -m -2
+---,---,---,---
+f Orbitals (l=3),,,
+fz3​,"l=3,m=0",Aligned along the z-axis.,python main.py shape -n 4 -l 3 -m 0
+fxz2​,"l=3,m=+1",Lobes in the xz-plane.,python main.py shape -n 4 -l 3 -m 1
+fyz2​,"l=3,m=−1",Lobes in the yz-plane.,python main.py shape -n 4 -l 3 -m -1
+fz(x2−y2)​,"l=3,m=+2",Lobes in xy plane near axes.,python main.py shape -n 4 -l 3 -m 2
+fxyz​,"l=3,m=−2",Lobes between the axes.,python main.py shape -n 4 -l 3 -m -2
+fx(x2−3y2)​,"l=3,m=+3",Complex shapes.,python main.py shape -n 4 -l 3 -m 3
+fy(3x2−y2)​,"l=3,m=−3",Complex shapes.,python main.py shape -n 4 -l 3 -m -3
 🧮 Mathematical Implementation
 
 The engine constructs the full wavefunction 
