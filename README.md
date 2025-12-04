@@ -98,6 +98,7 @@ This table maps the common chemical notation (e.g., px​, dz2​) to the requir
 | $f_{y(3x^2-y^2)}$ | $l=3, m=-3$ | Complex shapes. | `python main.py shape -n 4 -l 3 -m -3` |
 
 
+
 🧮 Mathematical Implementation
 
 The engine constructs the full wavefunction 
