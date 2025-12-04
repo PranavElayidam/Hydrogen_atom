@@ -44,7 +44,7 @@ cd hydrogen_atom
 
 Install dependencies:
 
-pip install -r requirements.txt
+pip install -r requirement.txt
 
 
 🖥️ Usage
